@@ -21,6 +21,48 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "patient-management",
+    name: "Patient Management System",
+    tagline: "Java 21 microservices with gRPC, Kafka and AWS CDK",
+    context: "Main project",
+    problem:
+      "Patient registration touches several concerns at once: authentication, the patient record, billing and analytics. Putting them in one app couples them; this system splits them into services that talk over the protocol that fits each job and deploys them as infrastructure-as-code.",
+    built: [
+      "Five Spring Boot services (API gateway, auth, patient, billing, analytics) using three styles of communication: REST through a Spring Cloud Gateway, gRPC from the patient service to billing, and Kafka events from the patient service to analytics.",
+      "JWT authentication: the auth service issues and validates tokens (Spring Security, BCrypt, JJWT), and a custom gateway filter rejects /api/patients/** requests without a valid Bearer token before they reach a service.",
+      "A patient service with validated DTOs, validation groups for create vs. update, duplicate-email checks and a global exception handler; creating a patient opens a billing account over gRPC and publishes a Protocol Buffers event to Kafka.",
+      "An AWS CDK (Java) stack that provisions a VPC across 2 AZs, ECS Fargate services, RDS PostgreSQL 17 databases with generated secrets, a 2-broker MSK (Kafka 3.6) cluster and an Application Load Balancer, deployable locally to LocalStack; REST Assured integration tests run against the gateway.",
+    ],
+    stack: [
+      "Java 21",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Spring Security",
+      "JWT",
+      "gRPC",
+      "Protocol Buffers",
+      "Apache Kafka",
+      "PostgreSQL",
+      "Docker",
+      "AWS CDK",
+      "ECS Fargate",
+      "RDS",
+      "MSK",
+      "LocalStack",
+      "JUnit 5",
+      "REST Assured",
+      "OpenAPI",
+    ],
+    metrics: [
+      { value: "5", label: "Spring Boot microservices" },
+      { value: "3", label: "protocols: REST, gRPC, Kafka" },
+      { value: "2", label: "RDS PostgreSQL 17 databases" },
+      { value: "1", label: "CDK stack for the whole system" },
+    ],
+    flow: ["Client", "API gateway + JWT check", "Patient service", "gRPC to billing", "Kafka event", "Analytics service"],
+    repo: "https://github.com/rishinavroop22/patient-management",
+  },
+  {
     slug: "weather-safety-assistant",
     name: "Weather Safety Assistant",
     tagline: "Agentic LLM advisory system",

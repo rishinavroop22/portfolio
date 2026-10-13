@@ -12,7 +12,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
     note: "APIs, validation, services",
-    items: ["FastAPI", "Flask", "Spring Boot", "Spring Cloud (Gateway, Eureka, Config)", "Keycloak / OAuth2", "Pydantic", "REST APIs"],
+    items: ["FastAPI", "Flask", "Spring Boot", "Spring Cloud (Gateway, Eureka, Config)", "Spring Security + JWT", "Keycloak / OAuth2", "Pydantic", "REST APIs"],
   },
   {
     title: "Frontend",
@@ -47,7 +47,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Messaging & distributed systems",
     note: "Moving work between services",
-    items: ["RabbitMQ", "Kafka"],
+    items: ["Apache Kafka", "RabbitMQ", "gRPC", "Protocol Buffers"],
   },
   {
     title: "Cloud, deployment & tools",
@@ -56,10 +56,14 @@ export const skillGroups: SkillGroup[] = [
       "Docker",
       "GitHub Actions",
       "Azure Container Apps",
-      "AWS (ECS Fargate, RDS)",
+      "AWS (ECS Fargate, RDS, MSK)",
+      "AWS CDK",
+      "LocalStack",
       "Render",
       "Linux",
       "Git",
+      "JUnit 5",
+      "REST Assured",
     ],
   },
 ];

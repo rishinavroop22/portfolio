@@ -30,7 +30,7 @@ const siteUrl =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : "http://localhost:3000");
 const description =
-  "Rishi Navroop, Computer Science student at JSS Science and Technology University. Backend services, agentic LLM systems with deterministic guardrails, and speech analytics.";
+  "Rishi Navroop, Computer Science student at JSS Science and Technology University. Java microservices with gRPC, Kafka and AWS CDK, agentic LLM systems with deterministic guardrails, and speech analytics.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -5,7 +5,7 @@ export const profile = {
   name: "Rishi Navroop",
   firstName: "Rishi",
   lastName: "Navroop",
-  headline: "Software developer building verifiable AI systems and the backends behind them.",
+  headline: "Software developer building distributed backends and verifiable AI systems.",
   intro:
     "I build backend services, machine-learning pipelines and interactive apps, with a habit of keeping the parts that must be right out of the model's hands and covering them with tests.",
   status: "Open to internships & full-time roles",
@@ -26,11 +26,11 @@ export const profile = {
     school: "JSS Science and Technology University",
     place: "Mysuru",
     years: "2023 – 2027",
-    cgpa: "8.58",
+    cgpa: "8.64",
   },
   about: [
     "I'm a Computer Science undergraduate at JSS Science and Technology University in Mysuru, graduating in 2027, looking for software engineering internships and full-time roles.",
-    "Most of my recent work sits where machine learning meets ordinary engineering: an agentic LLM assistant whose safety decisions come from a deterministic policy engine, a set of Spring Boot microservices that hand work to an AI service over RabbitMQ, a speech-analytics system that grounds every finding in measured audio, and an ML pipeline served through a small REST API with CI on every push.",
+    "My main project is a Java 21 microservices system for patient management: services that talk over REST, gRPC and Kafka, JWT auth at the gateway, and AWS infrastructure defined in CDK. Alongside it I work where machine learning meets ordinary engineering: an agentic LLM assistant whose safety decisions come from a deterministic policy engine, a set of Spring Boot microservices that hand work to an AI service over RabbitMQ, a speech-analytics system that grounds every finding in measured audio, and an ML pipeline served through a small REST API with CI on every push.",
     "What ties it together is verification. I like systems that can explain why they produced an answer, fail safely when data is missing, and come with the tests to prove it.",
   ],
 } as const;
